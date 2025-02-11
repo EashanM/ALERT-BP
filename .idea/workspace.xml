@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0afdfc2d-3576-438f-9bde-d704f27edc0b" name="Changes" comment="Created pair plot to visualize relationships and distributions">
-      <change afterPath="$PROJECT_DIR$/Data Processing.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Initial Models.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MICE.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bpPercentile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/harmonization.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/ALERT-BP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ALERT-BP.iml" afterDir="false" />
+    <list default="true" id="0afdfc2d-3576-438f-9bde-d704f27edc0b" name="Changes" comment="Finished transfer process and created files to aid in data processing">
+      <change afterPath="$PROJECT_DIR$/MICE10.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MICE11.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main/Initial Data Intake.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/dataProcessing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/imputation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Initial Data Intake.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/Initial Data Intake.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data Processing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main/Data Processing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GLMM_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Initial Data Intake.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Initial Models.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/main/5yrModel.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ML_VaryingModels.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Varying_Models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bpPercentile.py" beforeDir="false" afterPath="$PROJECT_DIR$/bpPercentile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/harmonization.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +62,15 @@
   "keyToString": {
     "Python.GLMM_test.executor": "Run",
     "Python.MICE.executor": "Run",
+    "Python.MICE10.executor": "Run",
+    "Python.MICE11.executor": "Run",
     "Python.ML_VaryingModels.executor": "Run",
     "Python.Varying_Models.executor": "Run",
+    "Python.imputation.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "transfer__branch",
+    "git-widget-placeholder": "initial__data",
+    "last_opened_file_path": "/Users/eashanmonga/PycharmProjects/ALERT-BP",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +80,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -173,6 +193,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialize ALERT-BP Repository" />
     <MESSAGE value="Add datasets and conduct initial processing." />
@@ -183,12 +214,16 @@
     <MESSAGE value="Changed data visibility for privacy" />
     <MESSAGE value="Changed data visibility for privacy using capture" />
     <MESSAGE value="Created pair plot to visualize relationships and distributions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created pair plot to visualize relationships and distributions" />
+    <MESSAGE value="Finished transfer process and created files to aid in data processing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished transfer process and created files to aid in data processing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ALERT_BP$imputation.coverage" NAME="imputation Coverage Results" MODIFIED="1739248248400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/utils" />
     <SUITE FILE_PATH="coverage/ALERT_BP$Varying_Models.coverage" NAME="Varying_Models Coverage Results" MODIFIED="1734315804915" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ALERT_BP$ML_VaryingModels.coverage" NAME="ML_VaryingModels Coverage Results" MODIFIED="1734315637883" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ALERT_BP$MICE11.coverage" NAME="MICE11 Coverage Results" MODIFIED="1739246057277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ALERT_BP$MICE.coverage" NAME="MICE Coverage Results" MODIFIED="1739157637956" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ALERT_BP$GLMM_test.coverage" NAME="GLMM_test Coverage Results" MODIFIED="1734405056166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ALERT_BP$MICE10.coverage" NAME="MICE10 Coverage Results" MODIFIED="1739245910945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
